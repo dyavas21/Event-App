@@ -2,6 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContainerPage extends StatelessWidget {
+
+  String? imageUrl;
+  String? title;
+  String? desc;
+
+  ContainerPage({
+    this.imageUrl,
+    this.title,
+    this.desc,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +23,7 @@ class ContainerPage extends StatelessWidget {
       child: Stack(
         children: [
           Image.asset(
-            'assets/card1.png',
+            imageUrl!,
             width: 260,
             height: 320,
           ),
@@ -33,7 +43,7 @@ class ContainerPage extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  'Midnight Bimosaurus Live',
+                 title!,
                   style: GoogleFonts.nunito(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -44,7 +54,7 @@ class ContainerPage extends StatelessWidget {
                   height: 2,
                 ),
                 Text(
-                  'Jan 09 • Buitenzorg',
+                  desc!,
                   style: GoogleFonts.poppins(
                     fontSize: 12,
                     color: Color(0xffA9A9A9),

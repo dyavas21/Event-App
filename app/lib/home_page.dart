@@ -139,11 +139,13 @@ class HomePage extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    ContainerPage(),
+                    ContainerPage(
+                      imageUrl: 'assets/card1.png', title: 'Midnight Bimosaurus Live', desc: 'Jan 09 • Buitenzorg',
+                    ),
                     SizedBox(
                       width: 24,
                     ),
-                    ContainerPage(),
+                    ContainerPage(imageUrl: 'assets/card2.png', title: 'Midnight Impact Music', desc: 'Jan 12 • Batavia',),
                     SizedBox(
                       width: 24,
                     ),
