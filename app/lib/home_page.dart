@@ -200,6 +200,62 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 12,
               ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 24,
+                  right: 24,
+                ),
+                child: Container(
+                  height: 227,
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        'assets/uiux.png',
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 24,
+                          top: 24,
+                          bottom: 24,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Text(
+                                'Education',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Spacer(),
+                            Text(
+                              'Mastering UI/UX Design',
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            Text(
+                              'Aug 22 • Bandung',
+                              style: GoogleFonts.poppins(
+                                color: Color(0xffA9A9A9),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
           // floatingActionButton: Container(
