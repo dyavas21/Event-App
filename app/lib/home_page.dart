@@ -1,3 +1,4 @@
+import 'package:app/detail_page.dart';
 import 'package:app/widget/container_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -139,19 +140,66 @@ class HomePage extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    ContainerPage(
-                      imageUrl: 'assets/card1.png', title: 'Midnight Bimosaurus Live', desc: 'Jan 09 • Buitenzorg',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailPage(),
+                          ),
+                        );
+                      },
+                      child: ContainerPage(
+                        imageUrl: 'assets/card1.png',
+                        title: 'Midnight Bimosaurus Live',
+                        desc: 'Jan 09 • Buitenzorg',
+                      ),
                     ),
                     SizedBox(
                       width: 24,
                     ),
-                    ContainerPage(imageUrl: 'assets/card2.png', title: 'Midnight Impact Music', desc: 'Jan 12 • Batavia',),
+                    ContainerPage(
+                      imageUrl: 'assets/card2.png',
+                      title: 'Midnight Impact Music',
+                      desc: 'Jan 12 • Batavia',
+                    ),
                     SizedBox(
                       width: 24,
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 24,
+                  right: 24,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'New For You',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'View all',
+                      style: GoogleFonts.poppins(
+                        fontSize: 12,
+                        color: Color(0xff3DD6AA),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 12,
+              ),
             ],
           ),
           // floatingActionButton: Container(
