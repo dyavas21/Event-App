@@ -212,6 +212,8 @@ class HomePage extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/uiux.png',
+                        height: 227,
+                        width: MediaQuery.of(context).size.width,
                       ),
                       Padding(
                         padding: EdgeInsets.only(
